@@ -6,7 +6,7 @@ export default class Calculator {
     constructor(str) {
 
         this.validator(str)
-        this.#numbers=str
+        this.#numbers=str.map(Number)
     }
 
     validator(str) {
@@ -17,7 +17,7 @@ export default class Calculator {
 
     getAdd(){
 
-        return this.#numbers.reduce((a,b)=>Number(a)+Number(b),0)
+        return this.#numbers.reduce((a,b)=>a+b,0)
     }
 
 }
