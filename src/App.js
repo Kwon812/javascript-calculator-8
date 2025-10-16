@@ -11,7 +11,9 @@ class App {
   async run() {
     const userStrRaw=await this.inputView.askAddString()
     const parsedNumber=StrParser.parse(userStrRaw)
+    // console.log(parsedNumber)
     const calculator=new Calculator(parsedNumber);
+
     const result=calculator.getAdd()
     this.outputView.printAddResult(result)
   }
